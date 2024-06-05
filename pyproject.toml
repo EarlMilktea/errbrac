@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "errbrac"
+authors = [
+  { name = "SS", email = "66886825+EarlMilktea@users.noreply.github.com" },
+]
+license = { file = "LICENSE" }
+description = "Parse & format scientific error notations"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest"]
+
+[tool.setuptools_scm]
+version_file = "errbrac/_version.py"
