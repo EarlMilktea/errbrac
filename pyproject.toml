@@ -35,3 +35,7 @@ dev = ["ruff", "pytest"]
 
 [tool.setuptools_scm]
 version_file = "errbrac/_version.py"
+
+[tool.ruff]
+target-version = "py38"
+line-length = 120
