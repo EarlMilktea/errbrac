@@ -64,11 +64,7 @@ class ErrorBracket:
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, ErrorBracket):
             return NotImplemented
-        return (
-            self.__val == other.__val
-            and self.__err == other.__err
-            and self.__prec == other.__prec
-        )
+        return self.__val == other.__val and self.__err == other.__err and self.__prec == other.__prec
 
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}({self.__val}, {self.__err}, {self.__prec})"
