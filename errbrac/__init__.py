@@ -1,4 +1,4 @@
-"""Implement errbrac."""
+"""Parse & format scientific error notations."""
 
 from __future__ import annotations
 
@@ -11,6 +11,8 @@ _DIGITS = frozenset("0123456789")
 
 
 class ErrorBracket:
+    """Represent a value with error."""
+
     __val: Decimal
     __err: Decimal
     __prec: int
@@ -21,6 +23,23 @@ class ErrorBracket:
         err: Decimal | str,
         prec: int = 1,
     ) -> None:
+        """Initialize with value, error, and precision.
+
+        Parameters
+        ----------
+        val : :class:`Decimal` or :class:`str`
+            Value to represent.
+        err : :class:`Decimal` or :class:`str`
+            Associated error.
+        prec : :class:`int`, optional
+            Number of digits inside the bracket. Default is `1`.
+
+        Raises
+        ------
+        :class:`ValueError`
+            If inputs are in invalid domain, or `err` is too large.
+
+        """
         try:
             val = Decimal(val)
         except Exception as e:
@@ -47,18 +66,39 @@ class ErrorBracket:
 
     @property
     def val(self) -> Decimal:
-        """Return the value."""
+        """Get the value.
+
+        Returns
+        -------
+        :class:`Decimal`
+            The value after rounding.
+
+        """
         # NOTE: Decimal is immutable
         return self.__val
 
     @property
     def err(self) -> Decimal:
-        """Return the error."""
+        """Get the error.
+
+        Returns
+        -------
+        :class:`Decimal`
+            The error associated with the value, rounded.
+
+        """
         return self.__err
 
     @property
     def prec(self) -> int:
-        """Return the precision (number of digits in the bracket)."""
+        """Return the precision.
+
+        Returns
+        -------
+        :class:`int`
+            Number of digits inside bracket.
+
+        """
         return self.__prec
 
     def __eq__(self, other: object) -> bool:
@@ -90,7 +130,19 @@ class ErrorBracket:
 
     @staticmethod
     def parse(ex: str) -> ErrorBracket:
-        """Parse error bracket string."""
+        """Parse bracket notation.
+
+        Parameters
+        ----------
+        ex : :class:`str`
+            String to parse.
+
+        Returns
+        -------
+        :class:`ErrorBracket`
+            Resulting object.
+
+        """
         if not isinstance(ex, str):
             msg = f"{ex} is not a string."
             raise TypeError(msg)
