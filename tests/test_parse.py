@@ -5,6 +5,12 @@ import pytest
 from errbrac import ErrorBracket
 
 
+def test_invalidtype() -> None:
+    """Test with invalid type."""
+    with pytest.raises(TypeError, match=r"1 is not a string."):
+        _ = ErrorBracket.parse(1)  # type: ignore[arg-type]
+
+
 @pytest.mark.parametrize(
     ("ex", "ref"),
     [
