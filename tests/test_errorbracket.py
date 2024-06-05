@@ -17,6 +17,18 @@ def test_init_ok() -> None:
     assert ErrorBracket("1", "0.1").prec == 1
 
 
+def test_init_ng_val() -> None:
+    """Provide invalid value."""
+    with pytest.raises(ValueError, match=r"Cannot construct Decimal from .*"):
+        _ = ErrorBracket("hoge", "1")
+
+
+def test_init_ng_err() -> None:
+    """Provide invalid value."""
+    with pytest.raises(ValueError, match=r"Cannot construct Decimal from .*"):
+        _ = ErrorBracket("1", "fuga")
+
+
 def test_init_ng_negerr() -> None:
     """Provide negative error."""
     with pytest.raises(ValueError, match="err must be positive."):
