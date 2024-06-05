@@ -1,3 +1,8 @@
+[![tox](https://github.com/EarlMilktea/errbrac/actions/workflows/tox.yml/badge.svg)](https://github.com/EarlMilktea/errbrac/actions/workflows/tox.yml)
+[![Python 3.8](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
 # errbrac: Parse & format scientific error notations
 
 🪽 Minimal dependencies: small and lightweight.
@@ -6,13 +11,17 @@
 
 ## Installation
 
-<!-- WIP -->
+📦 You can install the package via pip:
+
+```bash
+pip install git+https://github.com/EarlMilktea/errbrac
+```
 
 ## Usage
 
 ### Parsing bracket notations
 
-Scientific notation is also supported.
+📈 Scientific notation is also supported.
 
 ```python
 from errbrac import ErrorBracket
@@ -26,7 +35,7 @@ y = ErrorBracket.parse("-2.011(20)E+3")
 
 ### Formatting bracket notations
 
-Output notation is automatically chosen based on values.
+🤖 Output notation is automatically chosen based on values.
 
 ```python
 from errbrac import ErrorBracket
@@ -40,4 +49,4 @@ print(y) # -2011(20)
 
 ## License
 
-This package is licensed under the MIT license.
+📄 This package is licensed under the MIT license.
