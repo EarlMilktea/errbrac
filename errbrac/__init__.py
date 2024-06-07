@@ -19,8 +19,9 @@ class ErrorBracket:
 
     def __init__(
         self,
-        val: Decimal | str,
-        err: Decimal | str,
+        # No `float` to preserve precision
+        val: Decimal | int | str,
+        err: Decimal | int | str,
         prec: int = 1,
     ) -> None:
         """Initialize with value, error, and precision.
