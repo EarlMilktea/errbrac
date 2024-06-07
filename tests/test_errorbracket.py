@@ -1,5 +1,7 @@
 """Test ErrorBracket class."""
 
+from __future__ import annotations
+
 import re
 from decimal import Decimal
 
@@ -79,6 +81,12 @@ def test_eq() -> None:
     y = ErrorBracket("1", "0.1", 2)
     assert id(x) != id(y)
     assert x == y
+
+
+def test_eq_notimpl() -> None:
+    """Test the __eq__ method with different type."""
+    x = ErrorBracket("1", "0.1", 2)
+    assert x != "hoge"
 
 
 def test_repr() -> None:

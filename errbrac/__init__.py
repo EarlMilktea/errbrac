@@ -6,7 +6,7 @@ import itertools
 import re
 from decimal import Decimal
 
-_BRACKET_RE = re.compile(r"^(.*)\((\d+)\)(.*)$")
+_BRACKET_RE = re.compile(r"^([^()]*)\(([^()]+)\)([^()]*)$")
 _DIGITS = frozenset("0123456789")
 
 
