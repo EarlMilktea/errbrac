@@ -107,6 +107,9 @@ class ErrorBracket:
             return NotImplemented
         return self.__val == other.__val and self.__err == other.__err and self.__prec == other.__prec
 
+    def __hash__(self) -> int:
+        return hash((self.__val, self.__err, self.__prec))
+
     def __repr__(self) -> str:
         return f"{self.__class__.__name__}({self.__val}, {self.__err}, {self.__prec})"
 
