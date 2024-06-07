@@ -1,5 +1,5 @@
 """Empty setup.py for the package."""
 
-import setuptools
+from setuptools import setup
 
-setuptools.setup()
+setup()
