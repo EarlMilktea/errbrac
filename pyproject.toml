@@ -31,7 +31,7 @@ dynamic = ["version"]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["ruff", "pytest", "pytest-cov", "tox"]
+dev = ["ruff", "pytest", "pytest-cov", "tox", "mypy"]
 
 [tool.setuptools_scm]
 version_file = "errbrac/_version.py"
