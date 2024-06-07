@@ -31,7 +31,7 @@ dynamic = ["version"]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["ruff", "pytest", "pytest-cov", "tox"]
+dev = ["ruff", "pytest", "pytest-cov", "tox", "mypy"]
 
 [tool.setuptools_scm]
 version_file = "errbrac/_version.py"
@@ -39,3 +39,7 @@ version_file = "errbrac/_version.py"
 [tool.ruff]
 target-version = "py38"
 line-length = 120
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
