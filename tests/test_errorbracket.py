@@ -81,6 +81,12 @@ def test_eq() -> None:
     assert x == y
 
 
+def test_eq_notimpl() -> None:
+    """Test the __eq__ method with different type."""
+    x = ErrorBracket("1", "0.1", 2)
+    assert x != "hoge"
+
+
 def test_repr() -> None:
     """Test the __repr__ method."""
     x = ErrorBracket("1", "0.1", 2)
