@@ -1,5 +1,7 @@
 """Test the parse method."""
 
+from __future__ import annotations
+
 import pytest
 
 from errbrac import ErrorBracket
