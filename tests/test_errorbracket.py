@@ -89,6 +89,13 @@ def test_eq_notimpl() -> None:
     assert x != "hoge"
 
 
+def test_hash() -> None:
+    """Test the __hash__ method."""
+    x = ErrorBracket("1", "0.1", 2)
+    y = ErrorBracket("1", "0.1", 2)
+    assert hash(x) == hash(y)
+
+
 def test_repr() -> None:
     """Test the __repr__ method."""
     x = ErrorBracket("1", "0.1", 2)
