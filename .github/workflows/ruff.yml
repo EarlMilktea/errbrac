@@ -3,7 +3,7 @@ name: Ruff
 on: [push, pull_request]
 
 jobs:
-  ruff:
+  lint:
     runs-on: ubuntu-latest
 
     steps:

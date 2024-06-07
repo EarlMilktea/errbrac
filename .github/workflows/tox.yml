@@ -7,7 +7,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  run_tests:
     runs-on: ${{ matrix.os }}
 
     strategy:
