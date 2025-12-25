@@ -50,6 +50,7 @@ line-length = 120
 [tool.mypy]
 python_version = "3.10"
 strict = true
+files = ["errbrac", "tests"]
 
 [tool.uv]
 cache-keys = [{ file = "pyproject.toml" }, { git = true }]
