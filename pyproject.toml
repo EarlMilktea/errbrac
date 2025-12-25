@@ -7,7 +7,7 @@ name = "errbrac"
 authors = [
   { name = "SS", email = "66886825+EarlMilktea@users.noreply.github.com" },
 ]
-license = { file = "LICENSE" }
+license-files = ["LICENSE"]
 description = "Parse & format scientific error notations"
 readme = "README.md"
 classifiers = [
@@ -15,7 +15,6 @@ classifiers = [
   "Environment :: Console",
   "Intended Audience :: Education",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: 3.10",
