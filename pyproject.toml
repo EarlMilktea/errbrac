@@ -7,7 +7,7 @@ name = "errbrac"
 authors = [
   { name = "SS", email = "66886825+EarlMilktea@users.noreply.github.com" },
 ]
-license = { file = "LICENSE" }
+license-files = ["LICENSE"]
 description = "Parse & format scientific error notations"
 readme = "README.md"
 classifiers = [
@@ -15,31 +15,41 @@ classifiers = [
   "Environment :: Console",
   "Intended Audience :: Education",
   "Intended Audience :: Science/Research",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Scientific/Engineering",
   "Typing :: Typed",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10,<3.15"
 dynamic = ["version"]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["ruff", "pytest", "pytest-cov", "tox", "mypy"]
+dev = [
+  "ruff",
+  "pyright",
+  "pytest",
+  "pytest-cov",
+  "mypy",
+  "nox",
+  "types-setuptools",
+]
 
 [tool.setuptools_scm]
 version_file = "errbrac/_version.py"
 
 [tool.ruff]
-target-version = "py38"
 line-length = 120
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.10"
 strict = true
+files = ["errbrac", "tests"]
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { git = true }]
