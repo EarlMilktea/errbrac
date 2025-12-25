@@ -1,4 +1,4 @@
-name: mypy
+name: typecheck
 
 on: pull_request
 
@@ -16,5 +16,5 @@ jobs:
       - run: |
           pip install -U pip
           pip install .[dev]
-          mypy errbrac
-          mypy tests
+          mypy .
+          pyright
