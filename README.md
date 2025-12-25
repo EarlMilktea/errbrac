@@ -1,4 +1,4 @@
-[![Python 3.8](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![nox](https://github.com/EarlMilktea/errbrac/actions/workflows/nox.yml/badge.svg)](https://github.com/EarlMilktea/errbrac/actions/workflows/nox.yml)
 [![codecov](https://codecov.io/github/EarlMilktea/errbrac/graph/badge.svg?token=HLUVGWZW2O)](https://codecov.io/github/EarlMilktea/errbrac)
