@@ -60,7 +60,7 @@ class ErrorBracket:
         if abs(val) < err:
             msg = "Cannot format properly as err is larger than val."
             raise ValueError(msg)
-        exp = Decimal(f"1E{err.adjusted()-prec+1:+}")
+        exp = Decimal(f"1E{err.adjusted() - prec + 1:+}")
         self.__val = val.quantize(exp)
         self.__err = err.quantize(exp)
         self.__prec = prec
