@@ -163,3 +163,4 @@ cython_debug/
 
 # setuptools_scm
 errbrac/_version.py
+uv.lock

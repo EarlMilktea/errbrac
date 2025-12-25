@@ -43,3 +43,6 @@ line-length = 120
 [tool.mypy]
 python_version = "3.8"
 strict = true
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { git = true }]
